@@ -3,7 +3,7 @@
 const http = require("http")
 const json_var = require('./handson1')
 
-const detail = JSON.stringify(json_var)
+const detail = JSON.stringify(json_var) //manually change in string from json format
 console.log(detail)
 
 const server = http.createServer((req,res)=>{
@@ -32,6 +32,7 @@ const server = http.createServer((req,res)=>{
    }
 });
 
+
 server.listen(5000,()=>{
     try{
         console.log("server is running on port no. 5000")
@@ -42,28 +43,6 @@ server.listen(5000,()=>{
 })
 
 
-
-//handson 2
-
-const express = require("express");
-const app = express();
-
-const blogrouter = require("./route/blogrouter")
-const postrouter = require("./route/postrouter")
-const userrouter = require("./route/userrouter")
-
-app.use("/api/main",blogrouter)
-app.use("/api/main",postrouter)
-app.use("/api/main",userrouter)
-
-app.listen(6000,()=>{
-    try{
-        console.log("server is live on port no. 6000")
-    }
-    catch(err){
-        console.log("server is not live on port no. 6000")
-    }
-})
 
 // app.get("/",(req,res)=>{
 //     res.send("Home page")

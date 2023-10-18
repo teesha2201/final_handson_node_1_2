@@ -6,7 +6,7 @@ userrouter.get("/abc",(req,res)=>{
 userrouter.get("/pqr",(req,res)=>{
     res.send("User name :prq")
 })
-userrouter.get("xyz",(req,res)=>{
+userrouter.get("/xyz",(req,res)=>{
     res.send("User name :xyz")
 })
 module.exports = userrouter

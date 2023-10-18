@@ -9,8 +9,7 @@ postrouter.get("/music",(req,res)=>{
 postrouter.get("/movie",(req,res)=>{
     res.send("Welcome to Movie page ")
 })
-postrouter.get("",(req,res)=>{
-    res.send("page not found :404 error")
-})
+
+
 
 module.exports = postrouter;
